@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import JoelsButton from "./components/button";
+import PropExample from "./components/propExample";
 
+function helloWorld() {
+  console.log("Hello World");
+}
+
+function goodbyeWorld() {
+  console.log("Goodbye World");
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <JoelsButton />
+      <br />
+      <br />
+      <br />
+      <PropExample
+        prop1="hello1"
+        prop2="goodbye1"
+        callback={() => helloWorld()}
+      />
+      <br />
+      <br />
+      <br />
+      <PropExample
+        prop1="hello2"
+        prop2="goodbye2"
+        callback={() => goodbyeWorld()}
+      />
     </div>
   );
 }
